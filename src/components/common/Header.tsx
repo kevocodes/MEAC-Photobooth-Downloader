@@ -10,7 +10,7 @@ function Header() {
         <img src={theme === "light" ? "/logo-negro.svg" : "/logo-blanco.svg"} />
         <div className="flex flex-col">
           <p className="text-left font-oswald whitespace-nowrap">
-            Asado entre parejas
+            Asado Entre Parejas
           </p>
           <p className="text-left font-oswald whitespace-nowrap">
             Ministerio MEAC
