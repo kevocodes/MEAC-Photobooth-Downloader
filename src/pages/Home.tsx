@@ -39,7 +39,11 @@ function Home() {
   };
 
   return (
-    <section className="min-h-[calc(100dvh-80px)] flex flex-col justify-center items-center p-4 gap-8">
+    <section className="min-h-[calc(100dvh-80px)] flex flex-col justify-center items-center p-4 gap-2">
+      <h1 className="text-xl sm:text-2xl font-bold text-primary mb-4">
+        Descarga de fotografía
+      </h1>
+
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -51,7 +55,7 @@ function Home() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input {...field} placeholder="Ingrese su código, ej. ABC" />
+                  <Input {...field} placeholder="Ingresa tu código, ej. ABC" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
