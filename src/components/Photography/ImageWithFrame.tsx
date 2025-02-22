@@ -96,7 +96,7 @@ const ImageWithFrame: React.FC<ImageWithFrameProps> = ({ imageData }) => {
 
       <Button onClick={handleDownload} className="w-full" disabled={loading}>
         {loading && <Loader2 size={16} className="mr-2 animate-spin" />}
-        Descargar imágen
+        Descargar fotografía
       </Button>
     </div>
   );
