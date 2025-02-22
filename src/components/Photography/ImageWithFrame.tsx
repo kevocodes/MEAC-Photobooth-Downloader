@@ -4,6 +4,7 @@ import marco from "@/assets/Marco.png";
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
 import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
 
 interface ImageWithFrameProps {
   imageData: Photography;
@@ -45,8 +46,8 @@ const ImageWithFrame: React.FC<ImageWithFrameProps> = ({ imageData }) => {
       link.href = finalImage;
       link.download = `${imageData.code}_${includeFrame ? "con" : "sin"}_marco.jpg`;
       link.click();
-    } catch (error) {
-      console.error("Error al generar la imagen:", error);
+    } catch {
+      toast.error("Error al generar la imagen");
     } finally {
       setLoading(false);
     }
