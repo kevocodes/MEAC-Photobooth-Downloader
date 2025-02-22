@@ -21,7 +21,6 @@ function Photography() {
         setLoading(true);
         const photography = await getPhotographyById(photographyId!);
         setPhotography(photography);
-        console.log(photography);
       } catch (error) {
         if (error instanceof ResponseError) return toast.error(error.message);
         toast.error("Ocurrió un error inesperado al buscar la fotografía");
