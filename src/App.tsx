@@ -1,9 +1,26 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { PUBLIC_ROUTES } from "@/constants/routes";
+import Home from "@/pages/Home";
+import MainLayout from "./layouts/MainLayout";
+import Photography from "./pages/Photography";
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <Router>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path={PUBLIC_ROUTES.HOME} element={<Home />} />
+          <Route path={`${PUBLIC_ROUTES.PHOTOGRAPHY}/:photographyId`} element={<Photography />} />
+        </Route>
+        <Route path="*" element={<Navigate to={PUBLIC_ROUTES.HOME} />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
